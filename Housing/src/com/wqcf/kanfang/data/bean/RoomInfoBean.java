@@ -1,6 +1,5 @@
 package com.wqcf.kanfang.data.bean;
 
-import com.alibaba.fastjson.JSONObject;
 
 public class RoomInfoBean {
 	
@@ -12,8 +11,7 @@ public class RoomInfoBean {
 	public String address;
 	public String price;
 	public String resource_type;
-//	public Vedio vedio;
-	public String vedio;
+	public Vedio vedio;
 	public String image_url;
 	
 }

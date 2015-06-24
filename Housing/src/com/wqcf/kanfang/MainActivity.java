@@ -38,22 +38,24 @@ public class MainActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.Img_main_zufang:
-			toInfoList();
+			toInfoList("租房");
 			break;
 		case R.id.Img_main_ershou:
-			toInfoList();
+			toInfoList("二手");
 			break;
 		case R.id.Img_main_xinfang:
-			toInfoList();
+			toInfoList("新房");
 			break;
 		case R.id.Img_main_qifang:
-			toInfoList();
+			toInfoList("期房");
 			break;
 		}
 	}
 	
-	private void toInfoList(){
-		startActivity(new Intent(MainActivity.this,InfoListActivity.class));
+	private void toInfoList(String title){
+		Intent intent = new Intent(MainActivity.this,InfoListActivity.class);
+		intent.putExtra("title",title);
+		startActivity(intent);
 	}
 
     

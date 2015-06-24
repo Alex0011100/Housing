@@ -42,15 +42,16 @@ public class RoomListAdapter<T> extends XAdapter<T>{
 		}else{
 			vh = (ViewHolder) convertView.getTag();
 		}
-		RoomInfoBean ii = (RoomInfoBean) getItem(position);
-		vh.title.setText(ii.title);
-		vh.price.setText(ii.price+"元");
-		vh.desc.setText(ii.room_type+"室-"+ii.street+"街-"+ii.address+"门");
-		String url = ii.image_url;
+		RoomInfoBean roomInfoBean = (RoomInfoBean) getItem(position);
+		vh.title.setText(roomInfoBean.title);
+		vh.price.setText(roomInfoBean.price+"元");
+		vh.desc.setText(roomInfoBean.room_type+"室-"+roomInfoBean.street+"街-"+roomInfoBean.address+"门");
+		String url = roomInfoBean.image_url;
 		vh.picture.setTag(url);
 		Drawable cachedImage = asyncImageLoader.loadDrawable(url, new ImageCallback() {  
             public void imageLoaded(Drawable imageDrawable, String imageUrl) {  
             	 ImageView imageViewByTag = (ImageView) listView.findViewWithTag(imageUrl); 
+            	 imageViewByTag.setImageDrawable(imageDrawable);
             }  
         });  
 		if (cachedImage == null) {  

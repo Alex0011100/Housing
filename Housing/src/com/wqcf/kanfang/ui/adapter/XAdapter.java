@@ -33,7 +33,9 @@ public abstract class XAdapter<T> extends BaseAdapter{
 	public void clear() {
 		list.clear();
 	}
-	
+	public void add(T t){
+		list.add(t);
+	}
 	public void appendToList(T t, boolean isClearOld) {
 		if (t == null) {
 			return;

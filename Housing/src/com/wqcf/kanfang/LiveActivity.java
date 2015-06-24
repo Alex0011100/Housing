@@ -2,9 +2,11 @@ package com.wqcf.kanfang;
 
 import java.util.ArrayList;
 
+import com.wqcf.kanfang.data.core.DataManager;
 import com.wqcf.kanfang.util.Logger;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -62,8 +64,10 @@ public class LiveActivity extends Activity implements OnClickListener{
 	}
 	
 	private void playVideo(){
-		//vv.setVideoURI(null);
-		//vv.start();
+		String strURL = DataManager.getInstance().getRoomInfo().vedio.vedio_url;
+		Uri uri = Uri.parse(strURL);
+		vv.setVideoURI(uri);
+		vv.start();
 	}
 	
 	

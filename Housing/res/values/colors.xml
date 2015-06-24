@@ -9,5 +9,28 @@
     <color name="white">#FFFFFF</color>
     <color name="light_gray">#F7F9F6</color>
     <color name="gray">#7F7F7F</color>
-
+	<color name="gray_main_back">#f2f2f2</color>
+	
+	<color name="gray1">#A8A8A8</color>
+    <color name="gray2">#bcc9d2</color>
+    <color name="gray3">#e3e4e6</color>
+    <color name="gray4">#F8F8F8</color>
+    <color name="gray5">#F9F9F9</color>
+    <color name="gray6">#D7D7D7</color>
+    <color name="gray7">#9A9A9A</color>
+    <color name="gray8">#b6b6b6</color>
+    <color name="gray9">#cfcfcf</color>
+    <color name="gray10">#66777777</color>
+    <color name="gray11">#e3e3e3</color>
+    <color name="gray_deep">#dd4d4d4d</color>
+    <color name="gray_deep2">#4d4d4d</color>
+    <color name="gray_dot">#cccccc</color>
+    <color name="gray_listitem">#7c7c7c</color>
+    <color name="gray_keyworddialog">#888888</color>
+    <color name="gray_custom_audio_line">#eeece9</color>
+    <color name="gray_12">#828282</color>
+    <color name="gray_13">#c5c5c5</color>
+    <color name="gray_14">#eeeeee</color>
+    <color name="gray_15">#c1c1c1</color>
+    <color name="gray_16">#aaeeeeee</color>
 </resources>

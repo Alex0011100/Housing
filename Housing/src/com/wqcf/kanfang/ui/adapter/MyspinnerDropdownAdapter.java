@@ -18,6 +18,7 @@ public class MyspinnerDropdownAdapter extends BaseAdapter{
 	LayoutInflater inflater;  
     Context context;  
     ArrayList<String> list;  
+    private OnClickCallBack mCallBack;
     
     public MyspinnerDropdownAdapter(Context context, ArrayList<String> list) {  
         super();  
@@ -95,4 +96,19 @@ public class MyspinnerDropdownAdapter extends BaseAdapter{
     	this.list.clear();
     	list.addAll(str);
     }
+    
+    public void callBack(String selectedStr){
+    	if(mCallBack != null)
+    		mCallBack.callBack(selectedStr);
+    }
+    
+    public void setCallBack(OnClickCallBack callBack){
+    	this.mCallBack = callBack;
+    }
+    
+    
+    public static interface OnClickCallBack{
+    	public void callBack(String selectedStr);
+    }
+    
 }

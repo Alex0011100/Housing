@@ -1,4 +1,4 @@
-package com.wqcf.kanfang.view;
+package com.wqcf.kanfang.ui.view;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,30 +32,30 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
- * ViewPagerÊµÏÖµÄÍ¼Æ¬ÂÖ²¥×Ô¶¨ÒåÊÓÍ¼¿Ø¼þ£¬¼È¿ÉÒÔÊµÏÖ×Ô¶¯²¥·Å£¬Ò²¿ÉÒÔÖ§³Ö»¬¶¯ÇÐ»»Í¼Æ¬¡£
+ * ViewPagerÊµï¿½Öµï¿½Í¼Æ¬ï¿½Ö²ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½È¿ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Å£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ö§ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ð»ï¿½Í¼Æ¬ï¿½ï¿½
  * @author wuping
  *
  */
 
 public class SlideShowView extends FrameLayout {
 
-	// ÂÖ²¥Í¼Í¼Æ¬ÊýÁ¿
+	// ï¿½Ö²ï¿½Í¼Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
 	private final static int IMAGE_COUNT = 6;
 	
-	// ×Ô¶¯ÂÖ²¥µÄÊ±¼ä¼ä¸ô
+	// ï¿½Ô¶ï¿½ï¿½Ö²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
 	private final static int ITME_INTERVAL = 3;
 	
-	// ×Ô¶¯ÂÖ²¥ÆôÓÃ¿ª¹Ø
+	// ï¿½Ô¶ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½
 	private final static boolean isAutoPlay = true;
 	
-	//×Ô¶¨ÒåÂÖ²¥Í¼µÄ×ÊÔ´
+	//ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ô´
 	private int[] imageId = {R.drawable.room,R.drawable.room,R.drawable.room,R.drawable.room,R.drawable.room};
 	private List<ImageEntity> imageEntities;
 	
-	//·ÅÂÖ²¥Í¼µÄImageViewµÄlist
+	//ï¿½ï¿½ï¿½Ö²ï¿½Í¼ï¿½ï¿½ImageViewï¿½ï¿½list
 	private List<ImageView> imageViewList;
 	
-	// ·ÅÔ²µãµÄView µÄlist
+	// ï¿½ï¿½Ô²ï¿½ï¿½ï¿½View ï¿½ï¿½list
 	private List<View> dotViewList;
 	
 	private ViewPager viewPager;
@@ -64,10 +64,10 @@ public class SlideShowView extends FrameLayout {
 
 	private TextView tv_description2;
 	
-	//µ±Ç°ÂÖ²¥Ò³
+	//ï¿½ï¿½Ç°ï¿½Ö²ï¿½Ò³
 	private int currentItem;
 	
-	//¶¨Ê±ÈÎÎñ
+	//ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
 	private ScheduledExecutorService scheduledExecutorService;
 	
 	private Context context;
@@ -98,7 +98,7 @@ public class SlideShowView extends FrameLayout {
 	}
 	
 	 /** 
-     * Òì²½ÈÎÎñ,»ñÈ¡Êý¾Ý 
+     * ï¿½ì²½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ 
      *  
      */  
     class GetListTask extends AsyncTask<String, Integer, Boolean> {  
@@ -108,7 +108,7 @@ public class SlideShowView extends FrameLayout {
 		@Override  
         protected Boolean doInBackground(String... params) {  
             try {  
-                // ÕâÀïÒ»°ãµ÷ÓÃ·þÎñ¶Ë½Ó¿Ú»ñÈ¡Ò»×éÂÖ²¥Í¼Æ¬£¬ÏÂÃæÊÇÄ£ÄâÊý¾Ý
+                // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½Ë½Ó¿Ú»ï¿½È¡Ò»ï¿½ï¿½ï¿½Ö²ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 for (int i = 0; i < imageId.length; i++) {
 					ImageEntity entity = new ImageEntity();
 					entity.setResourceId(imageId[i]);
@@ -131,7 +131,7 @@ public class SlideShowView extends FrameLayout {
     }  
 
 	/**
-	 * 	³õÊ¼»¯ViewµÈUI
+	 * 	ï¿½ï¿½Ê¼ï¿½ï¿½Viewï¿½ï¿½UI
 	 * 
 	 */
 	private void initUI(Context context) {
@@ -143,17 +143,17 @@ public class SlideShowView extends FrameLayout {
 		LinearLayout dotLayout = (LinearLayout)findViewById(R.id.ll_dotcontainer);
 		dotLayout.removeAllViews();
 		
-		//ÈÈµã¸öÊýÓëÍ¼Æ¬ÌØÊâÏàµÈ
+		//ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < imageEntities.size(); i++) {
 			ImageView view = new ImageView(context);
 			view.setTag(imageEntities.get(i));
-			if(i == 0) {//¸øÒ»¸öÄ¬ÈÏÍ¼
+			if(i == 0) {//ï¿½ï¿½Ò»ï¿½ï¿½Ä¬ï¿½ï¿½Í¼
 				view.setBackgroundResource(R.drawable.logo);
 			}
 			view.setScaleType(ScaleType.CENTER);
 			imageViewList.add(view);
 			
-			//¹¹½¨µã
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			ImageView dotView = new ImageView(context);
 			dotView.setBackgroundResource(R.drawable.circle_white);
 			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -163,18 +163,18 @@ public class SlideShowView extends FrameLayout {
 			dotViewList.add(dotView);
 		}
 		
-		// »ñÈ¡TextView×é¼þ
+		// ï¿½ï¿½È¡TextViewï¿½ï¿½ï¿½
 //		tv_description1 = (TextView) findViewById(R.id.tv1);
 //		tv_description2 = (TextView) findViewById(R.id.tv2);
 		
-		//ÉèÖÃViewPager×é¼þ
+		//ï¿½ï¿½ï¿½ï¿½ViewPagerï¿½ï¿½ï¿½
 		viewPager = (ViewPager) findViewById(R.id.vp_slideshow);
 		viewPager.setFocusable(true);
 		
 		viewPager.setAdapter(new MypagerAdapter());
 		viewPager.setOnPageChangeListener(new MyPageChangeListerner());
 		
-		// ÉèÖÃviewpagerµÄµ±Ç°ÏîÎªÒ»¸ö±È½Ï´óµÄÊý£¬ÒÔ±ãÒ»¿ªÊ¼¾Í¿ÉÒÔ×óÓÒÑ­»·»¬¶¯
+		// ï¿½ï¿½ï¿½ï¿½viewpagerï¿½Äµï¿½Ç°ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½È½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ò»ï¿½ï¿½Ê¼ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int n = Integer.MAX_VALUE / 2 % imageViewList.size();  
         currentItem = Integer.MAX_VALUE / 2 - n;  
         
@@ -183,7 +183,7 @@ public class SlideShowView extends FrameLayout {
 	}
 	
 	/**
-	 * ViewPagerµÄÊÊÅäÆ÷
+	 * ViewPagerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 *
 	 */
 	private class MypagerAdapter extends PagerAdapter{
@@ -243,8 +243,8 @@ public class SlideShowView extends FrameLayout {
 	}
 	
 	/**
-	 * ViewPagerµÄ¼àÌýÆ÷
-	 * µ±ViewPagerÖÐµÄÒ³Ãæ·¢Éú¸Ä±äµÄÊ±ºòµ÷ÓÃ
+	 * ViewPagerï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ï¿½ï¿½ViewPagerï¿½Ðµï¿½Ò³ï¿½æ·¢ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
 	 *
 	 */
 	private class MyPageChangeListerner implements OnPageChangeListener{
@@ -278,7 +278,7 @@ public class SlideShowView extends FrameLayout {
 	}
 	
 	/**
-	 * Ö´ÐÐÂÖ²¥Í¼ÇÐ»»ÈÎÎñ
+	 * Ö´ï¿½ï¿½ï¿½Ö²ï¿½Í¼ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½
 	 *
 	 */
 	private class slideShowTask implements Runnable {
@@ -294,7 +294,7 @@ public class SlideShowView extends FrameLayout {
 	}
 
 	/**
-	 * ¿ªÊ¼ÂÖ²¥Í¼ÇÐ»»
+	 * ï¿½ï¿½Ê¼ï¿½Ö²ï¿½Í¼ï¿½Ð»ï¿½
 	 */
 	private void startPlay() {
 		scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
@@ -302,20 +302,20 @@ public class SlideShowView extends FrameLayout {
 	}
 	
 	/**
-	 * Í£Ö¹ÂÖ²¥Í¼ÇÐ»»
+	 * Í£Ö¹ï¿½Ö²ï¿½Í¼ï¿½Ð»ï¿½
 	 */
 	private void stopPlay() {
 		scheduledExecutorService.shutdownNow();
 	}
 
 	/**
-	 * ³õÊ¼»¯Ïà¹ØÊý¾Ý
+	 * ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private void initData() {
 		imageViewList = new ArrayList<ImageView>();  
         dotViewList = new ArrayList<View>();
         imageEntities = new ArrayList<ImageEntity>();
-        // Òì²½ÈÎÎñ»ñÈ¡Í¼Æ¬  
+        // ï¿½ì²½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Í¼Æ¬  
         new GetListTask().execute("");
 	}
 	
@@ -347,7 +347,7 @@ public class SlideShowView extends FrameLayout {
 	protected void onDetachedFromWindow() {
 		// TODO Auto-generated method stub
 		super.onDetachedFromWindow();
-		stopPlay();//µ±ÇÐ»»µ½±ðµÄ½çÃæÊ±£¬Í£Ö¹ÂÖ²¥Í¼
+		stopPlay();//ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Í£Ö¹ï¿½Ö²ï¿½Í¼
 	}
 	
 	@Override

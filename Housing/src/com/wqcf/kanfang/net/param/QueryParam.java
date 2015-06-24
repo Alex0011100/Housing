@@ -17,8 +17,8 @@ public class QueryParam {
 	public static final String PARAM_PRICE_BOTTON = "price_bottom";
 	public static final String PARAM_VEDIO = "vedio";
 	
-	
-	
+	public enum Trade_Type {RENT,ERSHOU,XINFANG,QIFANG};
+
 	
 	
 	

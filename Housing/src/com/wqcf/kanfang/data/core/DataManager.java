@@ -9,11 +9,10 @@ public class DataManager {
 	
 	private static DataManager instance;
 	
-	private RoomInfoBean curRoomInfo;
-	private Vedio vedio;
+	private RoomInfoBean mCurRoomInfo;
 	
 	private DataManager(){
-		
+		mCurRoomInfo = new RoomInfoBean();
 	}
 	
 	public static DataManager getInstance(){
@@ -22,11 +21,16 @@ public class DataManager {
 		return instance;
 	}
 	
-	public void setRoomInfo(RoomInfoBean roomInfoBean){
-		curRoomInfo = roomInfoBean;
-		JSONObject jo = (JSONObject) JSON.parse(roomInfoBean.vedio);
-	}
+//	public void setRoomInfo(RoomInfoBean roomInfoBean){
+//		curRoomInfo = roomInfoBean;
+//		JSONObject jo = (JSONObject) JSON.parse(roomInfoBean.vedio);
+//	}
 	public RoomInfoBean getRoomInfo(){
-		return curRoomInfo;
+		return mCurRoomInfo;
+	}
+
+	public void setRoomInfo(RoomInfoBean roomInfoBean) {
+		// TODO Auto-generated method stub
+		
 	}
 }

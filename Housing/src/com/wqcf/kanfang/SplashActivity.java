@@ -19,7 +19,7 @@ public class SplashActivity extends Activity{
 				checkUserInfo();
 			}
 			
-		}, 3000);
+		}, 1500);
 	}
 	
 	private void checkUserInfo(){
