@@ -14,5 +14,11 @@ public class Logger {
 			Log.d(s,"null");
 		}
 	}
+	public static void log(Object obj,String s){
+		if(obj==null)
+			Log.d(s,"null");
+		else
+			Log.d(s,"not null");
+	}
 	
 }

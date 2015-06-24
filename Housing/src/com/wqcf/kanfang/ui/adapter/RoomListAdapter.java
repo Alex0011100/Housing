@@ -51,7 +51,10 @@ public class RoomListAdapter<T> extends XAdapter<T>{
 		Drawable cachedImage = asyncImageLoader.loadDrawable(url, new ImageCallback() {  
             public void imageLoaded(Drawable imageDrawable, String imageUrl) {  
             	 ImageView imageViewByTag = (ImageView) listView.findViewWithTag(imageUrl); 
-            	 imageViewByTag.setImageDrawable(imageDrawable);
+//            	 Logger.log(imageViewByTag,"imageViewByTag");
+//            	 Logger.log(imageDrawable,"imageDrawable");
+            	 if(imageViewByTag!=null)
+            		 imageViewByTag.setImageDrawable(imageDrawable);
             }  
         });  
 		if (cachedImage == null) {  

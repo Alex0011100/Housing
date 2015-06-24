@@ -25,6 +25,10 @@ public class ParamTextView extends TextView{
 		super(context, attrs, defStyle);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public void checkParam(){
+		param = (String) getText();
+	}
 
 
 }

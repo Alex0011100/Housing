@@ -3,13 +3,17 @@ package com.wqcf.kanfang;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
 	private ImageView img_zufang,img_ershou,img_xinfang,img_qifang;
+	private long mPressedTime;
+	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,23 @@ public class MainActivity extends Activity implements OnClickListener{
 		Intent intent = new Intent(MainActivity.this,InfoListActivity.class);
 		intent.putExtra("title",title);
 		startActivity(intent);
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if (mPressedTime == 0
+					|| System.currentTimeMillis() - mPressedTime > 2000) {
+				mPressedTime = System.currentTimeMillis();
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				return false;
+			} else if (mPressedTime > 0
+					&& System.currentTimeMillis() - mPressedTime < 2000) {
+				System.exit(0);
+				return false;
+			}
+		}
+		return false;
 	}
 
     

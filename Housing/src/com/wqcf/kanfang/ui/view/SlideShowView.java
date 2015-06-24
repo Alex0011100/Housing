@@ -12,6 +12,7 @@ import com.wqcf.kanfang.R;
 
 import android.R.integer;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
@@ -103,7 +104,11 @@ public class SlideShowView extends FrameLayout {
      */  
     class GetListTask extends AsyncTask<String, Integer, Boolean> {  
   
+        public GetListTask(){}
         
+        public GetListTask(List<Drawable> drawList){
+        	
+        }
 
 		@Override  
         protected Boolean doInBackground(String... params) {  
@@ -323,6 +328,7 @@ public class SlideShowView extends FrameLayout {
 		private String description1;
 		private String description2;
 		private int resourceId;
+		private Drawable drawable;
 		public String getDescription1() {
 			return description1;
 		}
@@ -340,6 +346,9 @@ public class SlideShowView extends FrameLayout {
 		}
 		public void setResourceId(int resourceId) {
 			this.resourceId = resourceId;
+		}
+		public void setDrawable(Drawable drawable){
+			this.drawable = drawable;
 		}
 	}
 	

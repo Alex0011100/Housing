@@ -1,14 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/font_color_white"
-    android:orientation="vertical"
-    tools:context=".InfoActivity" >
+    android:layout_height="match_parent" >
 
     <RelativeLayout
+        android:id="@+id/RLayout_act_info_top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignParentTop="true"
         android:background="@drawable/infolist_title_bg" >
 
         <ImageView
@@ -39,33 +38,134 @@
             android:layout_marginRight="5dp"
             android:src="@drawable/search" />
     </RelativeLayout>
-	<LinearLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:orientation="vertical">
-	    <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"
-	        android:orientation="horizontal"
-	        android:layout_weight="1">
-	        <ImageView
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"/>
-	    </LinearLayout>
-	    <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"
-	        android:orientation="horizontal"
-	        android:layout_weight="1">
-	        
-	    </LinearLayout>
 
-	    <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"
-	        android:layout_weight="1"
-	        android:orientation="horizontal" >
-	    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/RLayout_act_info_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/infolist_title_bg" >
 
-	</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="联系中介"
+            android:textColor="@color/font_color_white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/RLayout_act_info_Bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/RLayout_act_info_top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.wqcf.kanfang.ui.view.SlideShowView
+                android:id="@+id/Slide_acc_info_RoomPic"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" >
+            </com.wqcf.kanfang.ui.view.SlideShowView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="简介（标题）"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                style="@style/LineView_Global"
+                android:layout_marginTop="5dp" />
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="5dp"
+			    
+                android:orientation="vertical" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="实时预览"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18sp"/>
+			    <VideoView 
+			        android:id="@+id/VideoView_acc_info_live"
+			        android:layout_gravity="center_horizontal"
+			        android:layout_marginTop="5dp"
+			        android:layout_height="100dp"
+			        android:layout_width="200dp"/>
+			</LinearLayout>
+			<View
+                style="@style/LineView_Global"
+                android:layout_marginTop="5dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="具体信息"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                style="@style/LineView_Global"
+                android:layout_marginTop="5dp" />
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="地图"
+                    android:textSize="18sp" />
+                <View 
+			        android:layout_gravity="center_horizontal"
+			        android:layout_marginTop="5dp"
+			        android:layout_height="130dp"
+			        android:layout_width="240dp"
+			        android:background="#111111"/>
+            </LinearLayout>
+            <View
+                style="@style/LineView_Global"
+                android:layout_marginTop="5dp" />
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="中介信息"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <View
+                style="@style/LineView_Global"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
