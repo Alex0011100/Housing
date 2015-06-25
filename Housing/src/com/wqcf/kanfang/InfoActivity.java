@@ -30,7 +30,6 @@ public class InfoActivity extends Activity implements OnClickListener{
 		//playVideo();
 	}
 	private void initView(){
-		mViewRoomPic = (SlideShowView) findViewById(R.id.Slide_acc_info_RoomPic);
 		mVV = (VideoView) findViewById(R.id.VideoView_acc_info_live);
 	}
 

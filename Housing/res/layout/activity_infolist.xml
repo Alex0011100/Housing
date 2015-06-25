@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/infolist_title_bg"
+        android:background="@color/yellow_main_bg"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -36,14 +36,16 @@
                 android:textColor="@color/font_color_white"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/Img_search_infolist"
+            <TextView
+                android:id="@+id/Txt_acc_infolist_City"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/search" />
+				android:text="城市"
+				android:textColor="@color/font_color_white"
+				android:textSize="15sp" />
         </RelativeLayout>
 
         <View

@@ -59,8 +59,9 @@ import android.widget.Toast;
 
 public class InfoListActivity extends Activity implements OnClickListener,OnItemClickListener,IXListViewListener{
 
-	private ImageView back, search;
+	private ImageView mBackBtn;
 	private ParamTextView mTxtLocation,mTxtRoomType,mTxtPrice,mTxtVedio;
+	private TextView mTxtCity;
 	
 	private XListView lv;
 	private RoomListAdapter<RoomInfoBean> adapter;
@@ -105,10 +106,12 @@ public class InfoListActivity extends Activity implements OnClickListener,OnItem
 	private void getDataAndInitView() {
 		String title = getIntent().getStringExtra("title");
 		((TextView)findViewById(R.id.Txt_title_infolist)).setText(title);
+		mTxtCity = (TextView)findViewById(R.id.Txt_acc_infolist_City);
+		mTxtCity.setText("北京");
 		mHandler = new Handler();
 		list = new ArrayList<RoomInfoBean>();
-		back = (ImageView) findViewById(R.id.Img_back_infolist);
-		search = (ImageView) findViewById(R.id.Img_search_infolist);
+		mBackBtn = (ImageView) findViewById(R.id.Img_back_infolist);
+		
 		mLinearLayout = (LinearLayout) findViewById(R.id.ll_container);
 		mTxtLocation = (ParamTextView) findViewById(R.id.tv_didian);
 		mTxtRoomType = (ParamTextView) findViewById(R.id.tv_tingshi);
@@ -127,8 +130,7 @@ public class InfoListActivity extends Activity implements OnClickListener,OnItem
 
 
 	private void initClickListener() {
-		back.setOnClickListener(this);
-		search.setOnClickListener(this);
+		mBackBtn.setOnClickListener(this);
 		lv.setOnItemClickListener(this);
 		mTxtLocation.setOnClickListener(this);
 		mTxtRoomType.setOnClickListener(this);

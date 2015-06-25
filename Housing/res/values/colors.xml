@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	
+    <color name="main">#ffc800</color>
+    
     <color name="font_color_white">#ffffff</color>
     <color name="origin">#ff7b00</color>
     <color name="red">#ff0000</color>
@@ -10,7 +12,7 @@
     <color name="light_gray">#F7F9F6</color>
     <color name="gray">#7F7F7F</color>
 	<color name="gray_main_back">#f2f2f2</color>
-	
+	<color name="yellow_main_bg">#ffc800</color>
 	<color name="gray1">#A8A8A8</color>
     <color name="gray2">#bcc9d2</color>
     <color name="gray3">#e3e4e6</color>
