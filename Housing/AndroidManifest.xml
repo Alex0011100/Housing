@@ -7,16 +7,18 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
-	<uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Light.NoTitleBar" >
-        <activity 
+        <activity
             android:name="com.wqcf.kanfang.SplashActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,25 +29,33 @@
             android:name="com.wqcf.kanfang.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
-            
         </activity>
-        <activity 
+        <activity
             android:name="com.wqcf.kanfang.InfoListActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
-            
+            android:screenOrientation="portrait" >
         </activity>
-        <activity 
+        <activity
             android:name="com.wqcf.kanfang.LiveActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize"
-            android:screenOrientation="portrait">
-            
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name="com.wqcf.kanfang.InfoActivity"
-            android:screenOrientation="portrait">
-            
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.wqcf.kanfang.OrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.wqcf.kanfang.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.wqcf.kanfang.RegisterActivity"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
