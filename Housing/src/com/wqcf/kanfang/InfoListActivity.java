@@ -302,7 +302,7 @@ public class InfoListActivity extends Activity implements OnClickListener,OnItem
 	@Override
 	public void onItemClick(AdapterView<?> viewParent, View view, int position, long id) {
 		// TODO Auto-generated method stub
-		DataManager.getInstance().setRoomInfo(list.get(position)); 
+		DataManager.getInstance().setRoomInfo(list.get(position-1)); 
 		//Intent intent = new Intent(InfoListActivity.this,LiveActivity.class);
 		Intent intent = new Intent(InfoListActivity.this,InfoActivity.class);
 		startActivity(intent);

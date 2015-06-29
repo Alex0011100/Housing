@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="4" >
+
+        <ImageView
+            android:id="@+id/Img_picture_listitem_otherroom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/room" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="5"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Txt_title_listitem_otherroom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="思源20年地铁13号线北苑站旁，精装一居，家具"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/Txt_desc_listitem_otherroom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="1室 - 北苑 - 中国铁建广场"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/Txt_price_listitem_otherroom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="3600元"
+            android:textColor="@color/red2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

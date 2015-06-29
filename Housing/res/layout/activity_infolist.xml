@@ -145,8 +145,7 @@
         android:cacheColorHint="#00000000"
         android:divider="@null"
         android:dividerHeight="5dp"
-        android:listSelector="#00000000"
-        android:background="@color/gray_main_back" >
+        android:listSelector="#00000000" >
     </com.wqcf.kanfang.opensrc.xlistview.XListView>
 
 </RelativeLayout>

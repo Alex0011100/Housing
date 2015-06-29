@@ -31,6 +31,6 @@ public class DataManager {
 
 	public void setRoomInfo(RoomInfoBean roomInfoBean) {
 		// TODO Auto-generated method stub
-		
+		this.mCurRoomInfo = roomInfoBean;
 	}
 }
