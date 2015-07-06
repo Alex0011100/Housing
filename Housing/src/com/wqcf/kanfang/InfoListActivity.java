@@ -142,8 +142,6 @@ public class InfoListActivity extends Activity implements OnClickListener,OnItem
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()){
-		case R.id.Img_search_infolist:
-			break;
 		case R.id.Img_back_infolist:
 			finish();
 			break;

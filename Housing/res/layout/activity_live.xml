@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/infolist_title_bg" >
+        android:background="@color/black_bg_tab_light" >
 
         <ImageView
             android:id="@+id/Img_back_infolist"
@@ -31,14 +31,6 @@
             android:textColor="@color/font_color_white"
             android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/Img_search_infolist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/search" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -46,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/infolist_title_bg"
+        android:background="@color/black_bg_tab_light"
         android:gravity="center_vertical" >
 
         <Button
@@ -78,7 +70,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/bg_originline1"
+        android:background="@drawable/rectangle_gray_stroke"
         android:orientation="horizontal" >
 
         <ListView
@@ -98,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/origin"
+                android:background="@color/red2"
                 android:gravity="center" >
 
                 <TextView
@@ -119,14 +111,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/origin"
+                android:background="@color/red2"
                 android:gravity="center" >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="全屏观看"
-                    android:textColor="@color/font_color_white"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -140,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/origin"
+                android:background="@color/red2"
                 android:gravity="center" >
 
                 <TextView

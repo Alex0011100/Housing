@@ -9,13 +9,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 public class FragViewPagerAdapter extends FragmentStatePagerAdapter{
 	
 	private ArrayList<Fragment> fragmentList;
-	private ArrayList<String> titleList;
-	
-	
-	public FragViewPagerAdapter(FragmentManager fm,ArrayList<Fragment> fragmentList,ArrayList<String> titleList) {
+
+	public FragViewPagerAdapter(FragmentManager fm,ArrayList<Fragment> fragmentList) {
 		super(fm);
 		this.fragmentList = fragmentList;
-		this.titleList = titleList;
 	}
 
 	@Override
@@ -31,10 +28,10 @@ public class FragViewPagerAdapter extends FragmentStatePagerAdapter{
 	}
 
 
-	@Override
-	public CharSequence getPageTitle(int position) {
-		// TODO Auto-generated method stub
-		return titleList.get(position);
-	}
+//	@Override
+//	public CharSequence getPageTitle(int position) {
+//		// TODO Auto-generated method stub
+//		return titleList.get(position);
+//	}
 	
 }

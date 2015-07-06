@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/font_color_white" >
-	<RelativeLayout
+
+    <RelativeLayout
         android:id="@+id/RLayout_act_register_Top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -28,58 +29,65 @@
             android:textColor="@color/font_color_white"
             android:textSize="20sp" />
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/LLayout_act_register_Top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/RLayout_act_register_Top"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
+
         <TextView
-            android:id="@+id/Txt_act_register_PhoneReg" 
+            android:id="@+id/Txt_act_register_PhoneReg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:text="手机注册"
             android:textColor="@color/gray_txt"
-            android:textSize="25sp"/>
-        <View 
+            android:textSize="25sp" />
+
+        <View
             android:layout_width="1.5dp"
             android:layout_height="match_parent"
-            android:background="@color/gray_txt"/>
-        <TextView 
-            android:id="@+id/Txt_act_register_MailReg" 
+            android:background="@color/gray_txt" />
+
+        <TextView
+            android:id="@+id/Txt_act_register_MailReg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:text="邮箱注册"
             android:textColor="@color/gray_txt"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_below="@id/LLayout_act_register_Top"
-        android:layout_width="match_parent"
-        android:layout_height="1.5dp"
-        android:orientation="horizontal">
-        <View
-            android:id="@+id/View_act_register_Phone"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:background="@color/gray_txt"/>
-        <View
-            android:id="@+id/View_act_register_Mail"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:background="@color/gray_txt"/>
-    </LinearLayout>
+
     <com.wqcf.kanfang.ui.view.TabViewPager
         android:id="@+id/ViewPager_act_register_ContentTab"
-        android:layout_below="@id/LLayout_act_register_Top"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-        
+        android:layout_height="match_parent"
+        android:layout_below="@id/LLayout_act_register_Top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@id/LLayout_act_register_Top"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/View_act_register_Phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray_txt" />
+
+        <View
+            android:id="@+id/View_act_register_Mail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray_txt" />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/main" >
+        android:background="@color/black_bg_tab_light" >
 
         <ImageView
             android:id="@+id/Img_back_infolist"
@@ -49,7 +49,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_originline1"
+                android:background="@drawable/rectangle_gray_stroke"
                 android:orientation="vertical" >
 
                 <LinearLayout
@@ -78,7 +78,8 @@
                             android:layout_height="0dp"
                             android:layout_weight="3"
                             android:gravity="center_vertical"
-                            android:text="NAME" />
+                            android:text="NAME"
+                            android:textColor="@color/black_txt" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -97,7 +98,8 @@
                             android:layout_weight="1"
                             android:gravity="center_vertical"
                             android:text="2222"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:textColor="@color/black_txt" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -117,7 +119,8 @@
                             android:layout_weight="1"
                             android:gravity="center_vertical"
                             android:text="2222"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:textColor="@color/black_txt" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -133,7 +136,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:layout_marginTop="8dp"
-                        android:background="@color/main"
+                        android:background="@color/black_bg_tab_light"
                         android:gravity="center" >
 
                         <TextView
@@ -141,7 +144,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawablePadding="5dp"
-                            android:drawableRight="@drawable/phone" />
+                            android:drawableRight="@drawable/phone"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="18200000000"
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -159,7 +166,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_originline1"
+                android:background="@drawable/rectangle_gray_stroke"
                 android:orientation="vertical" >
 
                 <RelativeLayout
@@ -185,7 +192,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/duigou"
+                        android:src="@drawable/circle_red"
                         android:visibility="visible" />
 
                     <ImageView
@@ -205,7 +212,7 @@
                     android:layout_height="1dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@color/gray1" />
+                    android:background="@color/gray_line" />
 
                 <RelativeLayout
                     android:id="@+id/Rlayout_act_order_WeChatPay"
@@ -229,7 +236,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/duigou"
+                        android:src="@drawable/circle_red"
                         android:visibility="visible" />
 
                     <ImageView
@@ -249,7 +256,7 @@
                     android:layout_height="1dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@color/gray1" />
+                    android:background="@color/gray_line" />
 
                 <RelativeLayout
                     android:id="@+id/Rlayout_act_order_UnionPay"
@@ -273,7 +280,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/duigou"
+                        android:src="@drawable/circle_red"
                         android:visibility="visible" />
 
                     <ImageView
@@ -288,7 +295,25 @@
                         android:visibility="invisible" />
                 </RelativeLayout>
             </LinearLayout>
-
+			<TextView
+			    android:layout_height="40dp"
+			    android:layout_width="match_parent"
+			    android:layout_marginLeft="40dp"
+			    android:layout_marginRight="40dp"
+			    android:layout_marginTop="20dp"
+			    android:background="@color/red2"
+			    android:text="确认预定"
+			    android:textColor="@color/white"
+			    android:layout_gravity="center_vertical"
+			    android:textSize="15sp"
+			    android:gravity="center"/>
+			<View
+			    android:layout_height="0.5dp"
+			    android:layout_width="match_parent"
+			    android:layout_marginLeft="10dp"
+			    android:layout_marginRight="10dp"
+			    android:layout_marginTop="20dp"
+			    android:background="@color/gray_line"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

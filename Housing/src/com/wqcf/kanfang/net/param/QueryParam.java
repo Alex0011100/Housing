@@ -4,7 +4,7 @@ public class QueryParam {
 	
 	public static final String TRADE_TYPE_RENT_HOUSE = "1";
 	public static final String TRADE_TYPE_SECONDHAND_HOUSE = "2";
-	public static final String TRADE_TYPE_NEW_HOUSE = "3";
+	public static final String TRADE_TYPE_BUY_HOUSE = "3";
 	public static final String TRADE_TYPE_FUTURE_HOUSE = "4";
 	
 	public static final String PARAM_USER_ID = "userId";

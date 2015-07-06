@@ -2,6 +2,7 @@ package com.wqcf.kanfang.ui.adapter;
 
 import com.wqcf.kanfang.R;
 import com.wqcf.kanfang.data.bean.RoomInfoBean;
+import com.wqcf.kanfang.data.bean.Vedio;
 import com.wqcf.kanfang.ui.support.AsyncImageLoader;
 import com.wqcf.kanfang.ui.support.AsyncImageLoader.ImageCallback;
 
@@ -17,10 +18,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class RoomListAdapter<T> extends XAdapter<T>{
-	
+
 	private AsyncImageLoader asyncImageLoader;  
 	private ListView listView;
-	
+
 	public RoomListAdapter(Context context,ListView listView) {
 		super(context);
 		this.listView = listView;
@@ -32,59 +33,67 @@ public class RoomListAdapter<T> extends XAdapter<T>{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		RoomListAdapter.ViewHolder vh = null;
 		if(convertView == null){
-			convertView = layoutInflater.inflate(R.layout.listviewitem_roominfo,null);
+			convertView = layoutInflater.inflate(R.layout.listviewitem_roominfo_new,null);
 			vh = new ViewHolder(convertView);
 			convertView.setTag(vh);
 		}else{
 			vh = (ViewHolder) convertView.getTag();
 		}
 		RoomInfoBean roomInfoBean = (RoomInfoBean) getItem(position);
+		Vedio vedio = roomInfoBean.vedio;
 		vh.title.setText(roomInfoBean.title);
 		vh.price.setText(roomInfoBean.price+"元");
-		vh.desc.setText(roomInfoBean.room_type+"室-"+roomInfoBean.street+"街-"+roomInfoBean.address+"门");
+		vh.desc.setText(roomInfoBean.room_type+"室-"+
+				roomInfoBean.area+
+				roomInfoBean.district+"-"+
+				roomInfoBean.address+
+				roomInfoBean.address+"门");
+		
+		
+		//vh.time.setText();
 		String url = roomInfoBean.image_url;
 		vh.picture.setTag(url);
 		Drawable cachedImage = asyncImageLoader.loadDrawable(url, new ImageCallback() {  
-            public void imageLoaded(Drawable imageDrawable, String imageUrl) {  
-            	 ImageView imageViewByTag = (ImageView) listView.findViewWithTag(imageUrl); 
-//            	 Logger.log(imageViewByTag,"imageViewByTag");
-//            	 Logger.log(imageDrawable,"imageDrawable");
-            	 if(imageViewByTag!=null)
-            		 imageViewByTag.setImageDrawable(imageDrawable);
-            }  
-        });  
+			public void imageLoaded(Drawable imageDrawable, String imageUrl) {  
+				ImageView imageViewByTag = (ImageView) listView.findViewWithTag(imageUrl); 
+				//            	 Logger.log(imageViewByTag,"imageViewByTag");
+				//            	 Logger.log(imageDrawable,"imageDrawable");
+				if(imageViewByTag!=null)
+					imageViewByTag.setImageDrawable(imageDrawable);
+			}  
+		});  
 		if (cachedImage == null) {  
-            vh.picture.setImageResource(R.drawable.logo);  
-        }else{  
-            vh.picture.setImageDrawable(cachedImage);  
-        }  
+			vh.picture.setImageResource(R.drawable.logo);  
+		}else{  
+			vh.picture.setImageDrawable(cachedImage);  
+		}  
 
 
 		return convertView;
 	}
-	
-	
+
+
 	public static class ViewHolder implements android.view.View.OnClickListener{
-		
+
 		public Context context;
 		public TextView title,price,time,desc;
 		public ImageView picture,watch;
-		
+
 		public ViewHolder(View v){
-			title = (TextView)v.findViewById(R.id.Txt_title_listitem_infolist);
-			price = (TextView)v.findViewById(R.id.Txt_price_listitem_infolist);
-			time = (TextView)v.findViewById(R.id.Txt_time_listitem_infolist);
-			desc = (TextView)v.findViewById(R.id.Txt_desc_listitem_infolist);
-			picture = (ImageView)v.findViewById(R.id.Img_picture_listitem_infolist);
-			watch = (ImageView)v.findViewById(R.id.Img_watch_listitem_infolist);
+			title = (TextView)v.findViewById(R.id.Txt_listitem_infolist_Title);
+			price = (TextView)v.findViewById(R.id.Txt_listitem_infolist_Price);
+			time = (TextView)v.findViewById(R.id.Txt_listitem_infolist_Time);
+			desc = (TextView)v.findViewById(R.id.Txt_listitem_infolist_Desc);
+			picture = (ImageView)v.findViewById(R.id.Img_listitem_infolist_Pic);
+			watch = (ImageView)v.findViewById(R.id.Img_listitem_infolist_Watch);
 		}
-		
+
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 
 		}
-		
+
 	}
 
 

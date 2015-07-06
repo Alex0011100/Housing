@@ -57,6 +57,10 @@
             android:name="com.wqcf.kanfang.RegisterActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.wqcf.kanfang.NewInfoListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

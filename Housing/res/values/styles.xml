@@ -3,7 +3,7 @@
     <style name="LineView_Global">
         <item name="android:layout_height">0.5dp</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@color/gray</item>
+        <item name="android:background">@color/gray_line</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">10dp</item>
     </style>

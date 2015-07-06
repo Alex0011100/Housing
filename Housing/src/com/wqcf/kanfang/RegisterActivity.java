@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class RegisterActivity extends android.support.v4.app.FragmentActivity implements OnClickListener{
 	
 	private ArrayList<Fragment> fragList;
-	private ArrayList<String> titleList;
+//	private ArrayList<String> titleList;
 	private TabViewPager viewPager;
 	private FragmentStatePagerAdapter mAdapter;
 	private FragmentManager fragmentManager;
@@ -62,13 +62,13 @@ public class RegisterActivity extends android.support.v4.app.FragmentActivity im
 		mFragMail = new FragmentMailReg();
 		mFragPhone = new FragmentPhoneReg();
 		fragList = new ArrayList<Fragment>();
-		titleList = new ArrayList<String>();
-		titleList.add("手机注册");
-		titleList.add("邮箱注册");
+//		titleList = new ArrayList<String>();
+//		titleList.add("手机注册");
+//		titleList.add("邮箱注册");
 		fragList.add(mFragPhone);
 		fragList.add(mFragMail);
 		
-		mAdapter = new FragViewPagerAdapter(fragmentManager, fragList, titleList);
+		mAdapter = new FragViewPagerAdapter(fragmentManager, fragList);
 		viewPager.setAdapter(mAdapter);
 		changeTabAndFragment(ClickTabIndex.PhoneTab);
 	}
