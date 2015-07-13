@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/Rlayout_frag_search_Search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/yellow_main_bg" >
+
+        <ImageView
+            android:id="@+id/Img_frag_search_Search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/search" />
+
+      <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/Img_frag_search_Search"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rectangle_yellow_stroke"
+            android:layout_marginRight="5dp"
+            android:hint="输入关键字"
+            android:textSize="12sp"
+            android:paddingLeft="10dp"/>"
+    </RelativeLayout>
+	<LinearLayout
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical"
+	    android:layout_below="@id/Rlayout_frag_search_Search"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp">
+	    <ListView
+	        android:id="@+id/ListView_frag_search_Histroy"
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"/>
+	    <TextView 
+	        android:id="@+id/Txt_frag_search_ClearHistory"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+	        android:background="@color/yellow_main_bg"
+	        android:layout_marginLeft="40dp"
+	        android:layout_marginRight="40dp"
+	        android:layout_marginTop="20dp"
+	        android:text="清除历史记录"
+	        android:textColor="@color/white"
+	        android:textSize="13sp"
+	        android:gravity="center"/>
+	</LinearLayout>
+</RelativeLayout>

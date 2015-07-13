@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/Llayout_frag_allcity_Select"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/yellow_main_bg"
+        android:orientation="horizontal" >
+
+        <com.wqcf.kanfang.ui.view.ParamTextView
+            android:id="@+id/Txt_frag_allcity_Area"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="地点"
+            android:textColor="@color/font_color_white" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_white" />
+
+        <com.wqcf.kanfang.ui.view.ParamTextView
+            android:id="@+id/Txt_frag_allcity_Roomtype"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="厅室"
+            android:textColor="@color/font_color_white" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_white" />
+
+        <com.wqcf.kanfang.ui.view.ParamTextView
+            android:id="@+id/Txt_frag_allcity_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="租金"
+            android:textColor="@color/font_color_white" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_white" />
+
+        <com.wqcf.kanfang.ui.view.ParamTextView
+            android:id="@+id/Txt_frag_allcity_Live"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="直播"
+            android:textColor="@color/font_color_white" />
+
+
+    </LinearLayout>
+
+    <com.wqcf.kanfang.ui.view.SlideShowView
+        android:id="@+id/SlideView_frag_allcity_AD"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
+
+    <com.wqcf.kanfang.opensrc.xlistview.XListView
+        android:id="@+id/ListView_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:listSelector="#00000000" />
+
+
+</LinearLayout>

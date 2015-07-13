@@ -1,6 +1,7 @@
 package com.wqcf.kanfang.interfaze;
 
 import com.wqcf.kanfang.opensrc.asynchttp.RequestParams;
+import com.wqcf.kanfang.opensrc.asynchttp.TextHttpResponseHandler;
 
 public interface INetNotify {
 	
@@ -13,8 +14,7 @@ public interface INetNotify {
 	/**
 	 *  notify the net module to send a http request
 	 */
-	public abstract void netRequest(RequestDataType type,RequestParams params);
+	public abstract void netRequest(TextHttpResponseHandler httpHandler,RequestParams params);
 	
 	
-	public enum RequestDataType{ReQuery,QueryMore}
 }

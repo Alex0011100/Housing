@@ -9,7 +9,7 @@ public class SplashActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_splash_new);
+		setContentView(R.layout.activity_splash);
 		Handler handler = new Handler();
 		handler.postDelayed(new Runnable(){
 
@@ -23,9 +23,9 @@ public class SplashActivity extends Activity{
 	}
 	
 	private void checkUserInfo(){
-		//startActivity(new Intent(SplashActivity.this,MainActivity.class));
+		startActivity(new Intent(SplashActivity.this,MainActivity.class));
 		//startActivity(new Intent(SplashActivity.this,LoginActivity.class));
-		startActivity(new Intent(SplashActivity.this,NewInfoListActivity.class));
+		//startActivity(new Intent(SplashActivity.this,NewInfoListActivity.class));
 		finish();
 	}
 

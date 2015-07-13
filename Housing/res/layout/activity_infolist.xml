@@ -2,150 +2,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_main_back"
     tools:context=".InfoListActivity" >
 
-    <LinearLayout
-        android:id="@+id/Linear_act_infolist_top"
+    <RelativeLayout
+        android:id="@+id/Rlayout_act_infolist_top"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
+        android:background="@color/yellow_main_bg" >
+
+        <ImageView
+            android:id="@+id/Img_back_infolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/Txt_title_infolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="租房"
+            android:textColor="@color/font_color_white"
+            android:textSize="20sp" />
+		<View
+		    android:layout_height="0.5dp"
+		    android:layout_width="match_parent"
+		    android:background="@color/white"
+		    android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/Llayout_act_infolist_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
         android:background="@color/yellow_main_bg"
-        android:orientation="vertical" >
+        android:orientation="horizontal" >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp" >
-
-            <ImageView
-                android:id="@+id/Img_back_infolist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/back" />
-
-            <TextView
-                android:id="@+id/Txt_title_infolist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="租房"
-                android:textColor="@color/font_color_white"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/Txt_acc_infolist_City"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-				android:text="城市"
-				android:textColor="@color/font_color_white"
-				android:textSize="15sp" />
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/font_color_white" />
-
-        <LinearLayout
-            android:id="@+id/ll_container"
+        <TextView
+            android:id="@+id/Txt_act_infolist_AllCity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全城"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <View 
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
 
-            <com.wqcf.kanfang.ui.view.ParamTextView
-                android:id="@+id/tv_didian"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text="地点"
-                android:textColor="@color/font_color_white" />
-
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/font_color_white" />
-
-            <com.wqcf.kanfang.ui.view.ParamTextView
-                android:id="@+id/tv_tingshi"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_gravity="center_vertical"
-                android:text="厅室"
-                android:textColor="@color/font_color_white" />
-
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/font_color_white" />
-
-            <com.wqcf.kanfang.ui.view.ParamTextView
-                android:id="@+id/tv_zujin"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text="租金"
-                android:textColor="@color/font_color_white" />
-
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/font_color_white" />
-
-            <com.wqcf.kanfang.ui.view.ParamTextView
-                android:id="@+id/tv_zhibo"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text="直播"
-                android:textColor="@color/font_color_white" />
-
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="match_parent"
-                android:background="@color/font_color_white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:text=">>>"
-                android:textColor="@color/font_color_white" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/Txt_act_infolist_NearBy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="附近"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <View 
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+        <TextView
+            android:id="@+id/Txt_act_infolist_Search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
     </LinearLayout>
 
-    <com.wqcf.kanfang.ui.view.SlideShowView
-        android:id="@+id/ad"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_below="@id/Linear_act_infolist_top" >
-    </com.wqcf.kanfang.ui.view.SlideShowView>
-
-    <com.wqcf.kanfang.opensrc.xlistview.XListView
-        android:id="@+id/listVeiw"
+    <com.wqcf.kanfang.ui.view.TabViewPager
+        android:id="@+id/TabViewPager_act_infolist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ad"
-        android:cacheColorHint="#00000000"
-        android:divider="@null"
-        android:dividerHeight="5dp"
-        android:listSelector="#00000000" >
-    </com.wqcf.kanfang.opensrc.xlistview.XListView>
+        android:layout_above="@id/Llayout_act_infolist_bottom"
+        android:layout_below="@id/Rlayout_act_infolist_top" />
 
 </RelativeLayout>

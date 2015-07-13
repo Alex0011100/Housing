@@ -40,7 +40,7 @@
                     android:gravity="center_vertical"
                     android:text="思源20年地铁13号线北苑站旁，精装一居，家具"
                     android:textColor="@color/black_txt"
-                    android:textSize="12sp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:id="@+id/Txt_listitem_infolist_Desc"
@@ -51,7 +51,7 @@
                     android:gravity="center_vertical"
                     android:text="1室 - 北苑 - 中国铁建广场"
                     android:textColor="@color/black_txt"
-                    android:textSize="10sp" />
+                    android:textSize="8sp" />
 
                 <TextView
                     android:id="@+id/Txt_listitem_infolist_Price"

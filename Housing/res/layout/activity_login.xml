@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main"
+    android:background="@color/yellow_main_bg"
     android:gravity="center" >
 
     <LinearLayout
@@ -25,8 +25,8 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:hint="用户名"
-            android:textColor="@color/main"
-            android:textColorHint="@color/main"
+            android:textColor="@color/yellow_main_bg"
+            android:textColorHint="@color/yellow_main_bg"
             android:textSize="20dp"
             android:background="@color/font_color_white" />
 
@@ -38,8 +38,8 @@
             android:layout_marginTop="5dp"
             android:gravity="center"
             android:hint="密码"
-            android:textColor="@color/main"
-            android:textColorHint="@color/main"
+            android:textColor="@color/yellow_main_bg"
+            android:textColorHint="@color/yellow_main_bg"
             android:textSize="20dp"
             android:background="@color/font_color_white" />
         <TextView
@@ -51,8 +51,8 @@
             android:layout_marginTop="25dp"
             android:gravity="center"
             android:background="@color/font_color_white"
-            android:textColor="@color/main"
-            android:textColorHint="@color/main"
+            android:textColor="@color/yellow_main_bg"
+            android:textColorHint="@color/yellow_main_bg"
             android:textSize="20dp"
             android:text="登录"/>
         <RelativeLayout 

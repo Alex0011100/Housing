@@ -135,7 +135,7 @@
         </LinearLayout>
 
         <com.wqcf.kanfang.ui.view.TabViewPager
-            android:id="@+id/TabViewPager_act_infolist"
+            android:id="@+id/TabViewPager_act_infolistnew"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/Llayout_act_infolistnew_Tab" />
@@ -194,6 +194,6 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <include layout="@layout/drawer_act_infolist" />
+    <include layout="@layout/drawer_user_info" />
 
 </android.support.v4.widget.DrawerLayout>

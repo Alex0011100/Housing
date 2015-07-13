@@ -140,10 +140,10 @@ public class NewInfoListActivity extends android.support.v4.app.FragmentActivity
 
 		fragmentManager = getSupportFragmentManager();
 
-		mFragmentRent = new FragmentRent();
-		mFragmentBuy = new FragmentBuy();
-		mFragmentSec = new FragmentSec();
-		mFragmentQF = new FragmentQF();
+//		mFragmentRent = new FragmentRent();
+//		mFragmentBuy = new FragmentBuy();
+//		mFragmentSec = new FragmentSec();
+//		mFragmentQF = new FragmentQF();
 
 		fragList = new ArrayList<Fragment>();
 		fragList.add(mFragmentRent);

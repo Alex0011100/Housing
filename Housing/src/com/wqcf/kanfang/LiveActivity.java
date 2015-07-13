@@ -6,6 +6,7 @@ import com.wqcf.kanfang.data.core.DataManager;
 import com.wqcf.kanfang.util.Logger;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 public class LiveActivity extends Activity implements OnClickListener{
@@ -27,6 +29,8 @@ public class LiveActivity extends Activity implements OnClickListener{
 	private ArrayList<String> ary;
 	private VideoView vv;
 	
+	private RelativeLayout mRlayoutFav,mRlayoutOrder;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -37,6 +41,8 @@ public class LiveActivity extends Activity implements OnClickListener{
 		
 	}
 	private void initView(){
+		mRlayoutFav = (RelativeLayout)findViewById(R.id.Rlayout_act_live_Favourite);
+		mRlayoutOrder = (RelativeLayout)findViewById(R.id.Rlayout_act_live_Order);
 		lv = (ListView) findViewById(R.id.ListView_act_live_message);
 		edt = (EditText) findViewById(R.id.Edt_act_live_userMessage);
 		btn = (Button)findViewById(R.id.Btn_act_live_send);
@@ -47,6 +53,7 @@ public class LiveActivity extends Activity implements OnClickListener{
 	}
 	private void initClickListener(){
 		btn.setOnClickListener(this);
+		mRlayoutOrder.setOnClickListener(this);
 	}
 	
 	@Override
@@ -59,7 +66,10 @@ public class LiveActivity extends Activity implements OnClickListener{
 			edt.clearFocus();
 			edt.setText("");
 			adapter.notifyDataSetChanged();
-			break;
+			return;
+		case R.id.Rlayout_act_live_Order:
+			startActivity(new Intent(this,OrderActivity.class));
+			return;
 		}
 	}
 	
