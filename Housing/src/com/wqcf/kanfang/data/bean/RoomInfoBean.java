@@ -1,5 +1,7 @@
 package com.wqcf.kanfang.data.bean;
 
+import java.util.ArrayList;
+
 
 public class RoomInfoBean {
 	
@@ -22,7 +24,7 @@ public class RoomInfoBean {
 	public String price;
 	public String resource_type;//房源类型
 	
-	public Vedio vedio;
+	public Video video;
 	public String image_url;
-	
+	public ArrayList<VideoHistory> video_history;
 }

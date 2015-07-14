@@ -74,7 +74,7 @@ public class LiveActivity extends Activity implements OnClickListener{
 	}
 	
 	private void playVideo(){
-		String strURL = DataManager.getInstance().getRoomInfo().vedio.vedio_url;
+		String strURL = DataManager.getInstance().getRoomInfo().video.video_url;
 		Uri uri = Uri.parse(strURL);
 		vv.setVideoURI(uri);
 		vv.start();

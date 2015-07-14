@@ -2,7 +2,7 @@ package com.wqcf.kanfang.ui.adapter;
 
 import com.wqcf.kanfang.R;
 import com.wqcf.kanfang.data.bean.RoomInfoBean;
-import com.wqcf.kanfang.data.bean.Vedio;
+import com.wqcf.kanfang.data.bean.Video;
 import com.wqcf.kanfang.ui.support.AsyncImageLoader;
 import com.wqcf.kanfang.ui.support.AsyncImageLoader.ImageCallback;
 
@@ -40,14 +40,14 @@ public class RoomListAdapter<T> extends XAdapter<T>{
 			vh = (ViewHolder) convertView.getTag();
 		}
 		RoomInfoBean roomInfoBean = (RoomInfoBean) getItem(position);
-		Vedio vedio = roomInfoBean.vedio;
+		Video vedio = roomInfoBean.video;
 		vh.title.setText(roomInfoBean.title);
 		vh.price.setText(roomInfoBean.price+"元");
-		vh.desc.setText(roomInfoBean.room_type+"室-"+
+		vh.desc.setText(roomInfoBean.room_type+"-"+
 				roomInfoBean.area+
 				roomInfoBean.district+"-"+
-				roomInfoBean.address+
-				roomInfoBean.address+"门");
+				roomInfoBean.housingname+
+				roomInfoBean.address);
 		
 		
 		//vh.time.setText();

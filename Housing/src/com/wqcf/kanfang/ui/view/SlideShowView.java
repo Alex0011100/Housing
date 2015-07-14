@@ -183,7 +183,7 @@ public class SlideShowView extends FrameLayout {
 		int n = Integer.MAX_VALUE / 2 % imageViewList.size();  
         currentItem = Integer.MAX_VALUE / 2 - n;  
         
-        dotViewList.get(0).setBackgroundResource(R.drawable.circle_origin);
+        dotViewList.get(0).setBackgroundResource(R.drawable.circle_orange_small);
         viewPager.setCurrentItem(currentItem);
 	}
 	
@@ -269,9 +269,9 @@ public class SlideShowView extends FrameLayout {
 		public void onPageSelected(int position) {
 			// TODO Auto-generated method stub
 			Log.i("info", "onPageSelected=====" + position);
-			((View)dotViewList.get(position % dotViewList.size())).setBackgroundResource(R.drawable.circle_origin);
+			((View)dotViewList.get(position % dotViewList.size())).setBackgroundResource(R.drawable.circle_orange_small);
 			if(position == currentItem) {
-				((View)dotViewList.get(currentItem % dotViewList.size())).setBackgroundResource(R.drawable.circle_origin);
+				((View)dotViewList.get(currentItem % dotViewList.size())).setBackgroundResource(R.drawable.circle_orange_small);
 			}else {
 				((View)dotViewList.get(currentItem % dotViewList.size())).setBackgroundResource(R.drawable.circle_white);
 			}

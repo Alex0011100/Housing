@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/black_bg_tab_light" >
+        android:background="@color/yellow_main_bg" >
 
         <ImageView
             android:id="@+id/Img_back_infolist"
@@ -92,7 +92,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginLeft="20dp"
@@ -102,18 +102,23 @@
                         android:id="@+id/Img_act_info_VideoHistory_1"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:src="@color/black_bg_tab_light" />
-
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/room" />
+					<ImageView
+					    android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/play_surface"/>
                     <TextView
                         android:id="@+id/Txt_act_info_VideoHistory_1"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
+                        android:layout_below="@id/Img_act_info_VideoHistory_1"
                         android:gravity="center"
                         android:text="2015.1.1"
                         android:textSize="12sp" />
-                </LinearLayout>
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginLeft="20dp"
@@ -123,18 +128,23 @@
                         android:id="@+id/Img_act_info_VideoHistory_2"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:src="@color/black_bg_tab_light" />
-
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/room" />
+					<ImageView
+					    android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/play_surface"/>
                     <TextView
                         android:id="@+id/Txt_act_info_VideoHistory_2"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
+                        android:layout_below="@id/Img_act_info_VideoHistory_2"
                         android:gravity="center"
                         android:text="2015.1.1"
                         android:textSize="12sp" />
-                </LinearLayout>
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginLeft="20dp"
@@ -144,16 +154,21 @@
                         android:id="@+id/Img_act_info_VideoHistory_3"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:src="@color/black_bg_tab_light" />
-
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/room" />
+					<ImageView
+					    android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/play_surface"/>
                     <TextView
                         android:id="@+id/Txt_act_info_VideoHistory_3"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
+                        android:layout_below="@id/Img_act_info_VideoHistory_3"
                         android:gravity="center"
                         android:text="2015.1.1"
                         android:textSize="12sp" />
-                </LinearLayout>
+                </RelativeLayout>
             </LinearLayout>
 
             <View
@@ -399,6 +414,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical" >
 
@@ -460,7 +476,7 @@
         android:layout_above="@id/View_act_info_Temp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="5dp"
-        android:background="@drawable/circle_black_big"
+        android:background="@drawable/circle_orange"
         android:gravity="center" >
 
         <TextView
@@ -480,7 +496,7 @@
         android:layout_above="@id/View_act_info_Temp"
         android:layout_marginRight="5dp"
         android:layout_toLeftOf="@id/RLayout_act_info_Bottom_Zhongjie"
-        android:background="@drawable/circle_black_big"
+        android:background="@drawable/circle_orange"
         android:gravity="center" >
 
         <TextView
