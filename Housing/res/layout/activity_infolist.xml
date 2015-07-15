@@ -50,8 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="全城"
+            android:gravity="center"
+            android:drawableLeft="@drawable/allcity_selected"
+            android:drawablePadding="3dp"
             android:textColor="@color/white"
             android:textSize="14sp" />
         <View 
