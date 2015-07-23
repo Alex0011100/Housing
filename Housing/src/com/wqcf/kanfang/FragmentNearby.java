@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.WindowManager.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -147,7 +148,7 @@ public class FragmentNearby extends BaseFragment implements IXListViewListener,O
 
 		case Price:
 			View view = getPopWindowView(mInflater,PopWindowIndex.Price);
-			mPopupWindow = new PopupWindow(view, RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+			mPopupWindow = new PopupWindow(view, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 			mPopupWindow.setBackgroundDrawable(new ColorDrawable(0));
 			mPopupWindow.setOutsideTouchable(true);  
 			mPopupWindow.setFocusable(true);  
@@ -155,7 +156,7 @@ public class FragmentNearby extends BaseFragment implements IXListViewListener,O
 			return ;
 		case RoomType:
 			view = getPopWindowView(mInflater,PopWindowIndex.RoomType);
-			mPopupWindow = new PopupWindow(view, RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+			mPopupWindow = new PopupWindow(view, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 			mPopupWindow.setBackgroundDrawable(new ColorDrawable(0));
 			mPopupWindow.setOutsideTouchable(true);  
 			mPopupWindow.setFocusable(true);  

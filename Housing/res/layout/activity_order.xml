@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/black_bg_tab_light" >
+        android:background="@color/yellow_main_bg" >
 
         <ImageView
             android:id="@+id/Img_back_infolist"
@@ -136,7 +136,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:layout_marginTop="8dp"
-                        android:background="@color/black_bg_tab_light"
+                        android:background="@color/yellow_main_bg"
                         android:gravity="center" >
 
                         <TextView

@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@color/black_bg_tab_light"
+        android:background="@color/yellow_main_bg"
         android:gravity="center_vertical" >
 
         <ImageView
@@ -46,7 +46,7 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/red2"
+                android:background="@color/black_bg_tab_light"
                 android:gravity="center"
                 android:text="登陆"
                 android:textColor="@color/white" />
@@ -57,7 +57,7 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="60dp"
-                android:background="@color/red2"
+                android:background="@color/black_bg_tab_light"
                 android:gravity="center"
                 android:text="注册"
                 android:textColor="@color/white" />

@@ -3,7 +3,7 @@ package com.wqcf.kanfang.data.core;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.wqcf.kanfang.data.bean.RoomInfoBean;
-import com.wqcf.kanfang.data.bean.Vedio;
+import com.wqcf.kanfang.data.bean.Video;
 
 public class DataManager {
 	

@@ -159,7 +159,11 @@ public class FragmentAllCity extends BaseFragment implements IXListViewListener,
 		switch(index){
 		case Area:
 			View view = getPopWindowView(mInflater,PopWindowIndex.Area);
+<<<<<<< HEAD
 			mPopupWindow = new PopupWindow(view, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+=======
+			mPopupWindow = new PopupWindow(view, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+>>>>>>> d3fa1eb4e692311c0a35c3d65120ecf562e42004
 			mPopupWindow.setBackgroundDrawable(new BitmapDrawable());//new ColorDrawable(0)
 			mPopupWindow.setOutsideTouchable(true);  
 			mPopupWindow.setFocusable(true);  
@@ -167,7 +171,11 @@ public class FragmentAllCity extends BaseFragment implements IXListViewListener,
 			return ;
 		case Price:
 			view = getPopWindowView(mInflater,PopWindowIndex.Price);
+<<<<<<< HEAD
 			mPopupWindow = new PopupWindow(view, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+=======
+			mPopupWindow = new PopupWindow(view, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+>>>>>>> d3fa1eb4e692311c0a35c3d65120ecf562e42004
 			mPopupWindow.setBackgroundDrawable(new ColorDrawable(0));
 			mPopupWindow.setOutsideTouchable(true);  
 			mPopupWindow.setFocusable(true);  
@@ -175,7 +183,11 @@ public class FragmentAllCity extends BaseFragment implements IXListViewListener,
 			return ;
 		case RoomType:
 			view = getPopWindowView(mInflater,PopWindowIndex.RoomType);
+<<<<<<< HEAD
 			mPopupWindow = new PopupWindow(view, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+=======
+			mPopupWindow = new PopupWindow(view, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+>>>>>>> d3fa1eb4e692311c0a35c3d65120ecf562e42004
 			mPopupWindow.setBackgroundDrawable(new ColorDrawable(0));
 			mPopupWindow.setOutsideTouchable(true);  
 			mPopupWindow.setFocusable(true);  

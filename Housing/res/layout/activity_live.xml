@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/black_bg_tab_light" >
+        android:background="@color/yellow_main_bg" >
 
         <ImageView
             android:id="@+id/Img_back_infolist"
@@ -177,7 +177,7 @@
             android:id="@+id/Rlayout_act_live_Order"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/circle_black_big"
+            android:background="@drawable/circle_orange"
             android:layout_alignParentRight="true"
             android:gravity="center" >
 
@@ -192,7 +192,7 @@
             android:id="@+id/Rlayout_act_live_Favourite"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/circle_black_big"
+            android:background="@drawable/circle_orange"
             android:layout_toLeftOf="@id/Rlayout_act_live_Order"
             android:layout_marginRight="5dp"
             android:gravity="center" >

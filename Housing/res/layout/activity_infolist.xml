@@ -29,12 +29,12 @@
             android:text="租房"
             android:textColor="@color/font_color_white"
             android:textSize="20sp" />
-		<View
-		    android:layout_height="0.5dp"
-		    android:layout_width="match_parent"
-		    android:background="@color/white"
-		    android:layout_alignParentBottom="true"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
     </RelativeLayout>
 
     <LinearLayout
@@ -42,14 +42,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/yellow_main_bg"
         android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/Txt_act_infolist_AllCity"
+        <LinearLayout
+            android:id="@+id/Llayout_act_infolist_AllCity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+<<<<<<< HEAD
             android:text="全城"
             android:gravity="center"
             android:drawableLeft="@drawable/allcity_selected"
@@ -57,32 +57,87 @@
             android:textColor="@color/white"
             android:textSize="14sp" />
         <View 
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:background="@color/white"/>
+=======
+            android:background="@color/yellow_main_bg"
+            android:gravity="center" >
 
-        <TextView
-            android:id="@+id/Txt_act_infolist_NearBy"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="附近"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
-        <View 
+            <ImageView
+                android:id="@+id/Img_act_infolist_AllCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_allcity_white" />
+
+            <TextView
+                android:id="@+id/Txt_act_infolist_AllCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="全城"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+>>>>>>> d3fa1eb4e692311c0a35c3d65120ecf562e42004
             android:layout_width="0.5dp"
             android:layout_height="match_parent"
-            android:background="@color/white"/>
-        <TextView
-            android:id="@+id/Txt_act_infolist_Search"
+            android:background="@color/yellow_main_bg" />
+
+        <LinearLayout
+            android:id="@+id/Llayout_act_infolist_NearBy"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="搜索"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:background="@color/yellow_main_bg"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/Img_act_infolist_NearBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_nearby_white" />
+
+            <TextView
+                android:id="@+id/Txt_act_infolist_NearBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="附近"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/yellow_main_bg" />
+
+        <LinearLayout
+            android:id="@+id/Llayout_act_infolist_Search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/yellow_main_bg"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/Img_act_infolist_Search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search_white" />
+
+            <TextView
+                android:id="@+id/Txt_act_infolist_Search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <com.wqcf.kanfang.ui.view.TabViewPager
@@ -91,5 +146,9 @@
         android:layout_height="match_parent"
         android:layout_above="@id/Llayout_act_infolist_bottom"
         android:layout_below="@id/Rlayout_act_infolist_top" />
-
+	<View
+	    android:layout_height="0.5dp"
+	    android:layout_width="match_parent"
+	    android:background="@color/yellow_main_bg"
+	    android:layout_above="@id/Llayout_act_infolist_bottom"/>
 </RelativeLayout>
